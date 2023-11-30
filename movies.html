@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Movies</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+          background-color: #008080;
+          color: #fff;
+          padding: 1em;
+          text-align: center;
+        }
+        button {
+      background-color: #008080;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <img width="250px" src="images/logo.png" alt="">
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="books.html">Books</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <a href="index.html" class="center-button" style="display: inline-block; background-color: #008080; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Go Back Home</a>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Movies</h1>
+        <form onsubmit="event.preventDefault(); getMovies()">
+          <input type="search" id="valueMovie" name="search" placeholder="Search...">
+          <select id="yearSelect">
+            <label for="yearSelect">Select a year:</label>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="all">All</option>
+          </select>
+          <input type="submit" value="Search">
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Search Results</h2>
+        <div id="searchResults"></div>
+      </div>
+    </div>
+
+    <!-- Display favorites here -->
+    <h2>Favorites</h2>
+    <div id="favorites-container"><hr></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
